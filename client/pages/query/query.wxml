@@ -1,0 +1,51 @@
+<!--pages/query/query.wxml-->
+<view class="container">
+  <form bindsubmit="formSubmit">
+    <view class="row">
+      <text>考生省份：</text>
+      <picker bindchange="bindKssfChange" value="{{kssfIndex}}" range="{{sfItems}}">
+        {{sfItems[kssfIndex]}}
+      </picker>
+    </view>
+    <view class="row">
+      <text>分科：</text>
+      <radio-group class="radio-group" bindchange="radioChange">
+        <label class="radio" wx:for="{{fkItems}}" wx:key="{{item.value}}">
+          <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+        </label>
+      </radio-group>
+    </view>
+    <view class="row">
+      <text>预计分数：</text>
+      <input type="text" name="score" type="number" maxlength="3" placeholder="请输入预计分数" />
+    </view>
+    <view class="row">
+      <text>大学所在省：</text>
+      <picker bindchange="bindDxsfChange" value="{{dxsfIndex}}" range="{{sfItems}}">
+        {{sfItems[dxsfIndex]}}
+      </picker>
+    </view>
+    <view class="row">
+      <text>学历层次：</text>
+      <picker bindchange="bindXlccChange" value="{{xlccIndex}}" range="{{xlccItems}}">
+        {{xlccItems[xlccIndex]}}
+      </picker>
+    </view>
+    <view class="row">
+      <text>学校特色：</text>
+      <picker bindchange="bindXxtsChange" value="{{xxtsIndex}}" range="{{xxtsItems}}">
+        {{xxtsItems[xxtsIndex]}}
+      </picker>
+    </view>
+    <view class="row">
+      <text>院校类型：</text>
+      <picker bindchange="bindYxlxChange" value="{{yxlxIndex}}" range="{{yxlxItems}}">
+        {{yxlxItems[yxlxIndex]}}
+      </picker>
+    </view>
+    <view class="row">
+      <button type="primary" form-type="submit">大学录取预测</button>
+    </view>
+
+  </form>
+</view>

@@ -1,0 +1,29 @@
+<!--pages/college/college.wxml-->
+<view class="container">
+    <form bindsubmit="formSubmit">
+        <view class="row">
+            <text>考生省份：</text>
+            <input type="text" name="userName" placeholder="请输入用户名" />
+        </view>
+        <view class="row">
+            <text>分科：</text>
+            <input type="password" name="userPassword" placeholder="请输入密码" />
+        </view>
+        <view class="row">
+            <text>预计分数：</text>
+            <input type="password" name="userPassword" placeholder="请输入密码" />
+        </view>
+        <view class="row">
+            <text>理想大学：</text>
+            <input type="password" name="userPassword" placeholder="请输入密码" />
+        </view>
+        <view class="row">
+            <text>专业（非必录）：</text>
+            <input type="password" name="userPassword" placeholder="请输入密码" />
+        </view>
+        <view class="row">
+            <button type="primary" form-type="submit">大学录取预测</button>
+        </view>
+
+    </form>
+</view>
